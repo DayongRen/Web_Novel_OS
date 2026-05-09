@@ -1,0 +1,30 @@
+name: "500k 多卷中长篇"
+word_range: [300000, 800000]
+chapter_range: [120, 350]
+structure: "multi_volume"
+batch_size: 5
+review_interval: 25
+major_review_interval: 50
+snapshot_interval: 10
+chapter_card_policy: "hybrid"
+
+required_outputs:
+  - Series_Bible
+  - Volume_Bibles
+  - Character_Bible
+  - World_Bible
+  - Power_or_System_Ledger
+  - Promise_Ledger
+  - Timeline
+  - Arc_Tracker
+
+quality_principles:
+  - "每卷有独立目标"
+  - "每50章一次结构复盘"
+  - "战力/情感不能通货膨胀"
+
+specific_gates:
+  - check_arc_progress
+  - check_volume_payoff
+  - check_power_inflation
+  - check_repeated_arc_pattern

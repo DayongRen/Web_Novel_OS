@@ -1,0 +1,22 @@
+genre: romance
+display_name: "现代言情"
+required_ledgers:
+  - Character_Bible
+  - Relationship_Arc_Ledger
+  - Emotional_Beat_Map
+  - Promise_Ledger
+quality_gates:
+  - check_emotional_progression
+  - check_relationship_agency
+  - check_conflict_not_artificial
+  - check_romantic_payoff_interval
+core_promises:
+  - "情感持续张力"
+  - "感情线实质推进"
+  - "误会有合理动机"
+  - "主角有自己的人生目标"
+reader_contract:
+  main_hook: "男女主之间的情绪拉扯"
+  core_expectation: "感情推进 + 误解解开 + HE"
+  emotional_payoff: "爱情确认时的情绪爆发"
+  payoff_interval: 8

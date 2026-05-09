@@ -1,0 +1,35 @@
+genre: school_youth
+display_name: "校园青春文"
+target_gender: neutral
+typical_length: 100000-500000
+
+core_promises:
+  - id: youth_resonance
+    description: "唤起读者的青春共鸣"
+    first_payoff_latest_chapter: 3
+  - id: first_love
+    description: "纯粹的初恋情感"
+    first_payoff_latest_chapter: 10
+  - id: growth_trial
+    description: "通过成长克服青春困境"
+    first_payoff_latest_chapter: 30
+  - id: friendship
+    description: "真挚的友情描写"
+    first_payoff_latest_chapter: 8
+
+school_requirements:
+  - "学校场景要真实，不是只有恋爱"
+  - "青春烦恼要有普遍共鸣性"
+  - "初恋描写要细腻，不要直接"
+  - "成绩/家庭压力要有体现"
+
+pacing:
+  emotional_beat_every_chapters: 2
+  event_climax_every_chapters: 10
+  confession_timing: "60-80%进度"
+
+avoid:
+  - "校园背景只是摆设"
+  - "主角天才无懈可击"
+  - "感情发展太快缺乏铺垫"
+  - "青春问题过于严重化（变成黑暗文）"

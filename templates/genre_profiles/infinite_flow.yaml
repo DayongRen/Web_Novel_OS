@@ -1,0 +1,25 @@
+genre: infinite_flow
+display_name: "无限流"
+required_ledgers:
+  - Instance_Ledger
+  - Rule_Ledger
+  - Team_Ledger
+  - Item_Ledger
+  - Survival_Risk_Ledger
+  - Promise_Ledger
+quality_gates:
+  - check_instance_rule_consistency
+  - check_survival_tension
+  - check_puzzle_fairness
+  - check_reward_and_cost
+  - check_instance_variety
+core_promises:
+  - "每个副本有明确规则和隐藏规则"
+  - "死亡威胁是真实的"
+  - "谜题解答符合推理公平性"
+  - "副本之间有连接性"
+reader_contract:
+  main_hook: "极限生存压力下的解谜"
+  core_expectation: "谜题 + 死亡压力 + 规则反转"
+  emotional_payoff: "险中求生的释放感"
+  instance_interval: "每 15 章一个副本"

@@ -1,0 +1,20 @@
+platform: fanqie_fast
+display_name: "番茄快节奏"
+chapter:
+  recommended_words: [1800, 2500]
+  hook_required: true
+  opening_conflict_required: true
+  max_exposition_ratio: 0.18
+pacing:
+  payoff_interval_chapters: 2
+  major_turn_interval_chapters: 8
+  cliffhanger: "required"
+style:
+  sentence_density: "low_to_medium"
+  dialogue_ratio: "medium_high"
+  inner_monologue: "low"
+  description: "minimal"
+opening_rules:
+  - "第一段必须有冲突或异常"
+  - "不超过100字进入事件"
+  - "每章末尾悬念必须强"

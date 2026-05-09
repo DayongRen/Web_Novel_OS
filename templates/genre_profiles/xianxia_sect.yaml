@@ -1,0 +1,50 @@
+genre: xianxia_sect
+display_name: "仙侠宗门文"
+target_gender: neutral
+typical_length: 800000-3000000
+
+core_promises:
+  - id: cultivation_growth
+    description: "修炼体系中的清晰成长"
+    first_payoff_latest_chapter: 8
+  - id: dao_heart
+    description: "主角独特的道心/理念"
+    first_payoff_latest_chapter: 20
+  - id: sect_politics
+    description: "宗门内的权力斗争与人情世故"
+    first_payoff_latest_chapter: 15
+  - id: ancient_secret
+    description: "上古秘辛、禁忌传承的揭露"
+    first_payoff_latest_chapter: 100
+  - id: fate_struggle
+    description: "对抗天命/因果的核心主题"
+    first_payoff_latest_chapter: 80
+  - id: immortal_breakthrough
+    description: "飞升、突破大境界的爽感"
+    first_payoff_latest_chapter: 60
+
+cultivation_system:
+  required:
+    - "明确的修炼阶段（炼气/筑基/金丹/元婴/化神/合体/大乘等）"
+    - "每阶段的寿元变化"
+    - "修炼资源的稀缺性"
+    - "天劫设定"
+    - "道心/心魔机制"
+  aesthetic_requirements:
+    - "诗意的修炼意境描写"
+    - "天地灵气的感知描写"
+    - "剑意/刀意/道意的个性化"
+
+pacing:
+  small_payoff_every_chapters: 4
+  medium_payoff_every_chapters: 15
+  major_payoff_every_chapters: 50
+  tribulation_chapters: "重要转折点"
+  allowed_slow_chapters: 3
+
+avoid:
+  - "修炼系统前后矛盾"
+  - "主角境界跳升无代价"
+  - "道理说教占据过多篇幅"
+  - "宗门政治太复杂读者跟不上"
+  - "女性角色只有花瓶功能"

@@ -1,0 +1,129 @@
+name: "100万字长篇连载"
+target_words: 1000000
+target_chapters: 500
+words_per_chapter: 2000
+platform: "起点/番茄主推长篇/阅文"
+
+description: |
+  适合起点/番茄长篇、玄幻、都市、仙侠、无限流、科幻。
+  六卷结构，每卷有独立目标、反派、爽点、谜团。
+  核心原则：每100章一个阶段目标，不能崩设定。
+
+volumes:
+  volume_1:
+    name: "新手村/起点卷"
+    chapters: "1-80"
+    word_budget: 160000
+    goal: "建立主角起点，完成第一阶段蜕变，初步建立世界观"
+    volume_boss: "本地最强对手/初期反派"
+    core_payoffs:
+      - "主角完成第一次重大逆袭（第40章左右）"
+      - "卷末一个让读者震惊的钩子"
+    core_mysteries:
+      - "主角的特殊之处是什么？"
+    volume_hook: "第80章结尾揭露/暗示更大的世界和更强的存在"
+  volume_2:
+    name: "区域争霸/扩张卷"
+    chapters: "81-200"
+    word_budget: 240000
+    goal: "扩大舞台，引入更强对手，完成实力质的提升"
+    volume_boss: "区域级强者/同辈顶尖"
+    core_payoffs:
+      - "在更大舞台的第一次扬名（第120章左右）"
+      - "与卷反派的首次正面交锋（第160章）"
+      - "卷末大爽点（打败卷反派）"
+    core_mysteries:
+      - "主角的真实背景/资质"
+    volume_hook: "更大世界的威胁/机遇"
+  volume_3:
+    name: "世界扩张卷"
+    chapters: "201-400"
+    word_budget: 400000
+    goal: "世界视野打开，触碰真正的顶级存在"
+    volume_boss: "世界级强者"
+    core_payoffs:
+      - "重大身世揭露（第280章左右）"
+      - "最大规模的胜利（第360章）"
+    core_mysteries:
+      - "世界的真实规则"
+    volume_hook: "世界真相初露端倪"
+  volume_4:
+    name: "体系反转卷"
+    chapters: "401-650"
+    word_budget: 500000
+    goal: "已知的规则被打破，主角认知发生根本转变"
+    volume_boss: "真正的幕后黑手之一"
+    core_payoffs:
+      - "认知大反转（第500章）"
+      - "主角突破到新维度（第580章）"
+    core_mysteries:
+      - "世界和主角命运的终极谜团"
+    volume_hook: "最终对决不可避免"
+  volume_5:
+    name: "终极主线卷"
+    chapters: "651-900"
+    word_budget: 500000
+    goal: "与终极反派的正面交锋，所有主线线索汇聚"
+    volume_boss: "终极反派"
+    core_payoffs:
+      - "所有伏笔开始回收（第700章起）"
+      - "主角与反派第一次正面交锋（第750章）"
+      - "主角最低谷（第820章）"
+    core_mysteries:
+      - "最终答案揭晓"
+    volume_hook: "决战在即"
+  volume_6:
+    name: "收束终局卷"
+    chapters: "901-1000"
+    word_budget: 200000
+    goal: "所有承诺回收，给读者圆满结局"
+    core_requirements:
+      - "第920章：最终战开始"
+      - "第960章：最终胜利"
+      - "第980-1000章：收束尾声，情感满足"
+
+key_beats:
+  - chapter: 1
+    type: "opening_hook"
+  - chapter: 40
+    type: "volume_1_major_payoff"
+  - chapter: 80
+    type: "volume_1_end"
+  - chapter: 120
+    type: "stage_advancement"
+  - chapter: 200
+    type: "volume_2_end"
+  - chapter: 280
+    type: "identity_reveal"
+  - chapter: 400
+    type: "volume_3_end"
+  - chapter: 500
+    type: "world_truth_reversal"
+  - chapter: 650
+    type: "volume_4_end"
+  - chapter: 820
+    type: "darkest_moment"
+  - chapter: 900
+    type: "volume_5_end"
+  - chapter: 960
+    type: "final_victory"
+  - chapter: 1000
+    type: "resolution"
+
+pacing_rules:
+  small_payoff_every: 3
+  medium_payoff_every: 10
+  major_payoff_every: 40
+  volume_end_hook_required: true
+  max_filler_in_a_row: 2
+  mid_volume_crisis_required: true
+
+continuity_checkpoints:
+  - chapter: 100
+    check: "所有开放承诺状态审查"
+  - chapter: 200
+    check: "人物弧线进展审查"
+  - chapter: 300
+    check: "伏笔账本全面审查"
+  - chapter: 500
+    check: "设定一致性全面审查"

@@ -1,0 +1,25 @@
+genre: suspense
+display_name: "悬疑推理"
+required_ledgers:
+  - Case_Ledger
+  - Clue_Ledger
+  - Suspect_Ledger
+  - Timeline
+  - Reveal_Map
+  - Promise_Ledger
+quality_gates:
+  - check_clue_fairness
+  - check_timeline_consistency
+  - check_suspect_motivation
+  - check_reveal_not_unearned
+  - check_red_herring_balance
+core_promises:
+  - "谜团从第一章建立"
+  - "所有线索对读者公平"
+  - "真相揭露令人满意"
+  - "凶手/答案在揭露前已出现"
+reader_contract:
+  main_hook: "不可解的谜团"
+  core_expectation: "推理公平性 + 真相震惊感"
+  emotional_payoff: "真相揭露后的震惊和满足"
+  clue_density: "每章至少一条线索"

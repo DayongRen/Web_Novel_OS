@@ -1,0 +1,25 @@
+genre: fantasy_xuanhuan
+display_name: "玄幻升级"
+required_ledgers:
+  - World_Bible
+  - Power_System_Ledger
+  - Upgrade_Ledger
+  - Faction_Ledger
+  - Treasure_Ledger
+  - Promise_Ledger
+quality_gates:
+  - check_power_scaling
+  - check_upgrade_frequency
+  - check_enemy_ladder
+  - check_world_rule_consistency
+  - check_reward_payoff
+core_promises:
+  - "清晰可见的战力成长"
+  - "等级体系前后一致"
+  - "每30章一次大型战力反馈"
+  - "反派持续升级"
+reader_contract:
+  main_hook: "弱者逆袭的成长期待"
+  core_expectation: "升级 + 打脸 + 等级碾压"
+  emotional_payoff: "突破境界的爽感"
+  payoff_interval: 3

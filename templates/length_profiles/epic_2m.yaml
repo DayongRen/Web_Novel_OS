@@ -1,0 +1,34 @@
+name: "200万字超长史诗"
+word_range: [1500000, 9999999]
+chapter_range: [700, 2000]
+structure: "mega_serial"
+batch_size: 5
+review_interval: 30
+major_review_interval: 100
+snapshot_interval: 10
+chapter_card_policy: "rolling_window"
+rolling_window_size: 30
+requires_human_review: true
+
+required_outputs:
+  - Series_Bible
+  - Season_Plan
+  - Volume_Bibles
+  - Faction_Ledger
+  - Character_Relationship_Graph
+  - Promise_Ledger
+  - Upgrade_Ledger
+  - Timeline
+
+quality_principles:
+  - "每500章一次主线认知反转"
+  - "每300章世界层级跃迁"
+  - "所有长期伏笔必须入账"
+  - "开放承诺数量上限20条"
+
+specific_gates:
+  - check_long_term_fatigue
+  - check_power_inflation
+  - check_repeated_arc_pattern
+  - check_reader_reentry_hook
+  - check_open_threads_under_limit

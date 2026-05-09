@@ -1,0 +1,40 @@
+genre: romance_ceo
+display_name: "言情总裁文"
+target_gender: female
+typical_length: 200000-800000
+
+core_promises:
+  - id: emotional_tension
+    description: "男女主之间持续的情绪拉扯"
+    first_payoff_latest_chapter: 3
+  - id: misunderstanding_resolution
+    description: "误会的积累与最终解开"
+    first_payoff_latest_chapter: 40
+  - id: love_confession
+    description: "明确的表白和感情确认"
+    first_payoff_latest_chapter: 70
+  - id: external_threat_overcome
+    description: "克服外部阻碍（家庭/身份/竞争者）"
+    first_payoff_latest_chapter: 60
+  - id: HE
+    description: "圆满结局"
+    first_payoff_latest_chapter: 100
+
+romance_requirements:
+  - "男女主每次见面都要有情绪推进"
+  - "误解必须有合理动机，不能是纯粹降智"
+  - "男主的强硬必须配合对女主独特的温柔"
+  - "女主必须有自己的人生目标，不只是等男主"
+
+pacing:
+  emotional_beat_every_chapters: 2
+  relationship_milestone_every_chapters: 8
+  misunderstanding_peak_chapter: "中点附近"
+  confession_chapter: "70-85%进度"
+
+avoid:
+  - "男女主长时间无实质互动"
+  - "误解靠信息不对称强行拖延"
+  - "女主被动等待被爱"
+  - "男主完美无缺没有弱点"
+  - "狗血剧情（车祸失忆/私生子）无铺垫使用"

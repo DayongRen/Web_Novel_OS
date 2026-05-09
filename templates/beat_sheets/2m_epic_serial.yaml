@@ -1,0 +1,80 @@
+name: "200万字以上超长篇"
+target_words: 2000000
+target_chapters: 1000
+words_per_chapter: 2000
+platform: "起点钻石/阅文精品/超长连载"
+
+description: |
+  适合玄幻、仙侠、领主、诸天、无限流、大世界观超长篇。
+  不做完整大纲，依靠阶段性目标、层级跃迁和核心矛盾稳定长期连载。
+  核心原则：每100章一个阶段目标，每300章一次世界层级跃迁，每500章一次主线认知反转。
+
+core_principles:
+  - "核心矛盾全书不变，其他一切可以演化"
+  - "每100章必须有一个明确的阶段性完成感"
+  - "每300章必须完成一次世界层级跃迁（主角从局部舞台跃迁到更大舞台）"
+  - "每500章必须有一次认知层面的大反转（已知的一切被重新定义）"
+  - "所有长期伏笔必须入账，不允许自由悬挂"
+
+phase_structure:
+  phase_1:
+    chapters: "1-100"
+    tier: "本地/初始舞台"
+    goal: "建立起点、完成初阶成长、本地最强"
+  phase_2:
+    chapters: "101-300"
+    tier: "区域/第二层舞台"
+    goal: "扩大视野、区域争霸、第一次层级跃迁"
+  phase_3:
+    chapters: "301-600"
+    tier: "大陆/国家级舞台"
+    goal: "世界扩张、揭露更大真相、500章认知反转"
+  phase_4:
+    chapters: "601-900"
+    tier: "世界/天域级舞台"
+    goal: "触碰世界本质、600章层级跃迁"
+  phase_5:
+    chapters: "901-1200"
+    tier: "多界/宇宙级舞台"
+    goal: "真正的终极舞台、1000章认知反转"
+  phase_beyond:
+    chapters: "1201+"
+    tier: "终极真相舞台"
+    goal: "所有谜团汇聚、走向大结局"
+
+critical_management_files:
+  - "Continuity_Ledger（极其重要）"
+  - "Power_System_Ledger（等级不能乱）"
+  - "Faction_Map（势力消长追踪）"
+  - "Open_Threads（悬挂线索不超过20条）"
+  - "Promise_Payoff_Map（承诺回收率不低于80%）"
+
+checkpoints:
+  every_100_chapters:
+    - "阶段目标完成确认"
+    - "开放承诺健康度检查"
+    - "人物弧线进展检查"
+  every_300_chapters:
+    - "世界层级跃迁完成确认"
+    - "设定一致性全面审计"
+    - "伏笔账本全面清理"
+  every_500_chapters:
+    - "认知反转执行确认"
+    - "故事圣经更新"
+    - "死亡角色和消失物品核查"
+
+pacing_rules:
+  small_payoff_every: 3
+  medium_payoff_every: 12
+  major_payoff_every: 50
+  tier_jump_every: 300
+  cognitive_reversal_every: 500
+  max_open_threads: 20
+  promise_payoff_health_minimum: 0.8
+
+risks_to_monitor:
+  - "权力通胀（每个新反派都比上一个强无数倍）"
+  - "世界膨胀（层级越来越多，读者迷失）"
+  - "人物死亡（重要人物死亡后读者流失）"
+  - "老读者遗忘（100章前的伏笔被忘记）"
+  - "节奏崩塌（卷后期注水严重）"

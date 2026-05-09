@@ -1,0 +1,40 @@
+# 环境与密钥
+.env
+*.pyc
+__pycache__/
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# 运行时产物（不提交）
+runs/
+snapshots/
+novel_studio/sandbox/
+
+# 项目正文（用户自己的小说，不提交）
+project_repo/manuscript/
+project_repo/outlines/00_core_idea.md
+
+# 但保留账本模板和空白结构
+!project_repo/canon/.gitkeep
+!project_repo/continuity/.gitkeep
+!project_repo/manuscript/.gitkeep
+!project_repo/outlines/.gitkeep
+
+# 生成的打包文件（体积大，按需生成）
+project_overview.md
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# 日志与缓存
+*.log
+.cache/

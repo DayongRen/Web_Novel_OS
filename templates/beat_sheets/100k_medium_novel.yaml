@@ -1,0 +1,70 @@
+name: "100k中篇"
+target_words: 100000
+target_chapters: 50
+words_per_chapter: 2000
+platform: "完结单卷/轻量爽文/单元悬疑"
+
+description: |
+  适合完整单卷故事、轻量爽文、单元悬疑、短篇言情扩展版。
+  四幕结构，有完整人物弧线，允许有限的世界观铺设。
+
+structure:
+  act_1:
+    chapters: "1-10"
+    goal: "设定、钩子、第一次胜利"
+    word_budget: 20000
+    requirements:
+      - "第1-3章：类型钩子建立，主角动机清晰"
+      - "第4-7章：冲突扩大，引入主要对立"
+      - "第8-10章：第一次重要胜利，开启主线"
+  act_2:
+    chapters: "11-30"
+    goal: "扩展冲突、关系变化、中段反转"
+    word_budget: 40000
+    requirements:
+      - "第15章：第一个中段爽点"
+      - "第20章：关系重要变化"
+      - "第25章：中点危机（主角最低谷或最大误解）"
+      - "第30章：中段大反转"
+  act_3:
+    chapters: "31-45"
+    goal: "逼近真相、主角低谷、最终反击"
+    word_budget: 30000
+    requirements:
+      - "第35章：核心真相开始揭露"
+      - "第40章：主角低谷（最黑暗时刻）"
+      - "第43章：最终决战开始"
+  act_4:
+    chapters: "46-50"
+    goal: "结局与情绪回收"
+    word_budget: 10000
+    requirements:
+      - "第46章：胜利确立"
+      - "第48章：所有承诺回收"
+      - "第50章：情感完满收束"
+
+key_beats:
+  - chapter: 1
+    type: "opening_hook"
+  - chapter: 5
+    type: "inciting_incident"
+  - chapter: 10
+    type: "first_victory"
+  - chapter: 15
+    type: "mid_act_2_payoff"
+  - chapter: 25
+    type: "midpoint_crisis"
+  - chapter: 30
+    type: "mid_reversal"
+  - chapter: 40
+    type: "dark_night_of_soul"
+  - chapter: 44
+    type: "climax_begin"
+  - chapter: 50
+    type: "resolution"
+
+pacing_rules:
+  small_payoff_every: 2
+  medium_payoff_every: 8
+  major_payoff_every: 25
+  max_filler_in_a_row: 1

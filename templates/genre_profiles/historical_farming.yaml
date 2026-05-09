@@ -1,0 +1,21 @@
+genre: historical_farming
+display_name: "古代种田"
+required_ledgers:
+  - Character_Bible
+  - Resource_Ledger
+  - Timeline
+  - Promise_Ledger
+quality_gates:
+  - check_resource_logic
+  - check_knowledge_cost
+  - check_social_constraint
+  - check_farming_variety
+core_promises:
+  - "现代知识应用有学习成本"
+  - "资源积累有过程"
+  - "古代社会规则真实"
+  - "种田内容要有趣不流水账"
+reader_contract:
+  main_hook: "从一无所有到建立基业"
+  core_expectation: "成长 + 安全感 + 亲情/感情"
+  emotional_payoff: "每次阶段性成功的满足感"

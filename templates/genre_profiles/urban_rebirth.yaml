@@ -1,0 +1,85 @@
+genre: urban_rebirth
+display_name: "都市重生文"
+target_gender: male
+typical_length: 500000-1500000
+
+core_promises:
+  - id: regret_repair
+    description: "修复前世遗憾（爱情/事业/家庭）"
+    first_payoff_latest_chapter: 20
+  - id: knowledge_advantage
+    description: "利用前世记忆获得信息差优势"
+    first_payoff_latest_chapter: 5
+  - id: face_slapping
+    description: "让曾经看不起主角的人付出代价"
+    first_payoff_latest_chapter: 15
+  - id: wealth_accumulation
+    description: "从穷小子到富豪的经济逆袭"
+    first_payoff_latest_chapter: 30
+  - id: relationship_reversal
+    description: "前世背叛者的结局和主角的胜利"
+    first_payoff_latest_chapter: 80
+  - id: family_redemption
+    description: "补偿家人，保护亲情"
+    first_payoff_latest_chapter: 25
+
+opening_requirements:
+  first_1000_words:
+    - "主角在命运转折点醒来（高考/入职/相亲/临死前）"
+    - "立即呈现前世最深的遗憾或伤害"
+    - "读者快速理解主角失去了什么"
+    - "主角做出第一个和前世不同的选择"
+  first_3_chapters:
+    - "建立重生动机（背叛/悔恨/死亡原因）"
+    - "展示主角具有的前世知识优势"
+    - "创造第一个小胜利或改变"
+    - "引入至少一个读者会期待被打脸的反角"
+  first_10_chapters:
+    - "完成第一次正式打脸或逆袭"
+    - "引入主要长期反派"
+    - "开启商业/事业/能力成长轨道"
+    - "建立感情线（哪怕只是初遇）"
+
+protagonist_requirements:
+  - "主角必须主动，不能等待机会"
+  - "主角的知识优势必须有限制（只了解大势，细节需要努力）"
+  - "主角的感情要有深度，不只是工具人收割"
+  - "主角有明显的性格特征，不是完美人"
+
+pacing:
+  small_payoff_every_chapters: 2
+  medium_payoff_every_chapters: 8
+  major_payoff_every_chapters: 30
+  cliffhanger_frequency: high
+  allowed_slow_chapters_in_a_row: 1
+
+power_system:
+  type: "knowledge_advantage + business/social skill"
+  visible_progression: true
+  bottlenecks_required: true
+  cost_of_advantage:
+    - "信息差会随时间缩小（未来变化）"
+    - "主角的能力需要努力落地，不是自动成功"
+
+avoid:
+  - "过度回忆前世而拖慢开篇节奏"
+  - "主角表现得全知全能无限制"
+  - "打脸场景重复无升级感"
+  - "主角长时间被动忍耐"
+  - "所有人都崇拜主角没有真实阻力"
+  - "商业操作缺乏基本逻辑"
+  - "感情线沦为附属品"
+
+chapter_end_patterns:
+  - "新的威胁出现"
+  - "意外发现（知道了某件关键信息）"
+  - "计划执行前的最后一刻"
+  - "打脸瞬间悬停"
+  - "意外的人物登场"
+
+emotional_beats:
+  - "愤怒感（看到前世仇人得意）"
+  - "爽感（逆袭和打脸时刻）"
+  - "温情感（家人互动）"
+  - "期待感（等待计划执行）"
+  - "共鸣感（主角说出读者想说的话）"

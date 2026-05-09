@@ -1,0 +1,31 @@
+name: "100万字长篇连载"
+word_range: [800000, 1500000]
+chapter_range: [300, 700]
+structure: "serial_longform"
+batch_size: 5
+review_interval: 25
+major_review_interval: 100
+snapshot_interval: 10
+chapter_card_policy: "rolling_window"
+rolling_window_size: 30
+
+required_outputs:
+  - Series_Bible
+  - Season_Plan
+  - Volume_Bibles
+  - Faction_Ledger
+  - Character_Relationship_Graph
+  - Promise_Ledger
+  - Timeline
+
+quality_principles:
+  - "每100章一次认知反转"
+  - "每300章一次世界层级跃迁"
+  - "老读者重新入场钩子"
+  - "防止战力通胀"
+
+specific_gates:
+  - check_long_term_fatigue
+  - check_power_inflation
+  - check_repeated_arc_pattern
+  - check_reader_reentry_hook

@@ -1,0 +1,20 @@
+platform: qidian_male
+display_name: "起点男频"
+chapter:
+  recommended_words: [2000, 3500]
+  hook_required: true
+  opening_conflict_required: true
+  max_exposition_ratio: 0.20
+pacing:
+  payoff_interval_chapters: 3
+  major_turn_interval_chapters: 10
+  cliffhanger: "required"
+style:
+  sentence_density: "medium"
+  dialogue_ratio: "medium"
+  inner_monologue: "medium"
+  description: "brief"
+opening_rules:
+  - "前1000字必须有事件"
+  - "前3章建立核心矛盾"
+  - "主角不能纯被动"

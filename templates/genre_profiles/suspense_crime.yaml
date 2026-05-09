@@ -1,0 +1,46 @@
+genre: suspense_crime
+display_name: "悬疑犯罪文"
+target_gender: neutral
+typical_length: 200000-800000
+
+core_promises:
+  - id: mystery_hook
+    description: "开篇即有吸引人的谜团"
+    first_payoff_latest_chapter: 1
+  - id: fair_play
+    description: "所有线索对读者公平呈现"
+    first_payoff_latest_chapter: "全程"
+  - id: red_herrings
+    description: "合理的误导让读者猜错"
+    first_payoff_latest_chapter: 10
+  - id: truth_reveal
+    description: "令人满意的真相揭露"
+    first_payoff_latest_chapter: 90
+  - id: emotional_justice
+    description: "真相揭露后的情感满足"
+    first_payoff_latest_chapter: 95
+
+mystery_requirements:
+  - "所有真相线索必须在揭露前已经出现"
+  - "每条误导线索都要有合理解释"
+  - "凶手/真相不能是最后一章才出现的新人物"
+  - "推理过程必须基于已知信息"
+  - "不能靠巧合解决案件"
+
+clue_management:
+  - "每章至少放置一条真实或误导线索"
+  - "线索密度：开篇高，中段中，揭露前高"
+  - "误导与真相的比例：约2:1"
+
+pacing:
+  clue_reveal_every_chapters: 2
+  red_herring_every_chapters: 5
+  tension_peak_chapters: "70-85%进度"
+  truth_reveal_chapter: "85-95%进度"
+  small_payoff_every_chapters: 3
+
+avoid:
+  - "真相靠巧合和运气"
+  - "侦探有主角光环（知道读者不知道的信息）"
+  - "犯罪动机太弱（读者不信）"
+  - "案件和主角没有个人情感联系"

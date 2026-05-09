@@ -1,0 +1,20 @@
+platform: serious_literary
+display_name: "严肃文学/纯文学"
+chapter:
+  recommended_words: [3000, 8000]
+  hook_required: false
+  opening_conflict_required: false
+  max_exposition_ratio: 0.50
+pacing:
+  payoff_interval_chapters: 8
+  major_turn_interval_chapters: 25
+  cliffhanger: "not_required"
+style:
+  sentence_density: "high"
+  dialogue_ratio: "low_to_medium"
+  inner_monologue: "high"
+  description: "rich"
+opening_rules:
+  - "允许慢开篇"
+  - "环境描写可以充分"
+  - "人物内心世界优先"

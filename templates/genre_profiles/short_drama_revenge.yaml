@@ -1,0 +1,38 @@
+genre: short_drama_revenge
+display_name: "短剧复仇文"
+target_gender: female
+typical_length: 20000-80000
+
+core_promises:
+  - id: immediate_conflict
+    description: "第一章即展示核心矛盾"
+    first_payoff_latest_chapter: 1
+  - id: rapid_reversal
+    description: "快速的身份/地位反转"
+    first_payoff_latest_chapter: 5
+  - id: villain_punishment
+    description: "反派受到明确惩罚"
+    first_payoff_latest_chapter: 15
+  - id: protagonist_triumph
+    description: "主角的完全胜利"
+    first_payoff_latest_chapter: 20
+
+short_drama_requirements:
+  - "开篇即高潮，不铺垫"
+  - "每一章都有明确的冲突爆发点"
+  - "反转要密集（每3-5章一次）"
+  - "不需要复杂世界观，聚焦人际冲突"
+  - "情感要强烈，不需要细腻"
+
+pacing:
+  conflict_every_chapters: 1
+  reversal_every_chapters: 3
+  villain_punishment_chapters: "最后30%"
+  chapter_length: 1000-2000
+
+avoid:
+  - "过度铺垫"
+  - "心理描写过多"
+  - "支线太多"
+  - "主角反复原谅反派"
+  - "结局不彻底"

@@ -1,0 +1,45 @@
+genre: sci_fi_mecha
+display_name: "科幻机甲文"
+target_gender: male
+typical_length: 600000-2000000
+
+core_promises:
+  - id: mecha_combat
+    description: "震撼的机甲战斗描写"
+    first_payoff_latest_chapter: 5
+  - id: pilot_growth
+    description: "驾驶员的成长和机甲的进化"
+    first_payoff_latest_chapter: 10
+  - id: tech_worldbuilding
+    description: "合理自洽的科幻世界观"
+    first_payoff_latest_chapter: 15
+  - id: war_stakes
+    description: "宏观的战争和文明存亡危机"
+    first_payoff_latest_chapter: 30
+  - id: hidden_tech
+    description: "隐藏的技术突破或古代科技"
+    first_payoff_latest_chapter: 50
+
+tech_system:
+  required:
+    - "机甲等级体系（明确战力差距）"
+    - "能源限制（不能无限战斗）"
+    - "驾驶员资质评估体系"
+    - "武器和装甲的物理逻辑"
+  forbidden:
+    - "机甲随意变形出现新功能"
+    - "驾驶员无视物理伤害"
+
+pacing:
+  battle_chapter_ratio: 0.35
+  strategy_chapter_ratio: 0.25
+  character_chapter_ratio: 0.20
+  worldbuilding_chapter_ratio: 0.20
+  small_payoff_every_chapters: 3
+  major_battle_every_chapters: 20
+
+avoid:
+  - "科技设定自相矛盾"
+  - "战斗描写缺乏空间感"
+  - "人类文明危机但读者感受不到压迫感"
+  - "机甲只是暴力工具没有个性"

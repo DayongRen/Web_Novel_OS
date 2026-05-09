@@ -1,0 +1,32 @@
+template_id: auction_scene
+display_name: "拍卖场景范本"
+applicable_genres: ["xuanhuan_upgrade", "xianxia_sect", "sci_fi_mecha", "urban_rebirth"]
+
+structure:
+  phase_1:
+    name: "建立期待"
+    beats:
+      - "拍卖品的稀世性建立（其他人的反应）"
+      - "主角想要它的理由清晰"
+      - "主角的资源限制（不能直接砸钱）"
+  phase_2:
+    name: "竞争升级"
+    beats:
+      - "主要竞争对手出现（最好是反角）"
+      - "价格/条件不断升级"
+      - "主角面临资源危机"
+  phase_3:
+    name: "转折"
+    beats:
+      - "主角的意外底牌出现"
+      - "竞争对手的震惊反应"
+  phase_4:
+    name: "获得与代价"
+    beats:
+      - "主角获得拍卖品"
+      - "但付出了某种代价或招来了更大麻烦"
+
+avoid:
+  - "拍卖太简单没有竞争压力"
+  - "主角随便就赢了没有代价"
+  - "拍卖品获得后没有后续影响"

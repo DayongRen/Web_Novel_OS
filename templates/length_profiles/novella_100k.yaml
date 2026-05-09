@@ -1,0 +1,25 @@
+name: "100k 中篇"
+word_range: [50000, 150000]
+chapter_range: [25, 60]
+structure: "three_act"
+batch_size: 5
+review_interval: 10
+major_review_interval: 999
+snapshot_interval: 5
+chapter_card_policy: "full_preplan"
+
+required_outputs:
+  - Story_Bible
+  - Character_Bible
+  - Chapter_Cards
+  - Promise_Ledger
+
+quality_principles:
+  - "四幕结构完整"
+  - "中点危机有力"
+  - "结局情感封闭"
+
+specific_gates:
+  - check_midpoint_turn
+  - check_arc_progress
+  - check_ending_closure

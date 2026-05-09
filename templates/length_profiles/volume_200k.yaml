@@ -1,0 +1,28 @@
+name: "200k 卷级网文"
+word_range: [150000, 300000]
+chapter_range: [60, 120]
+structure: "five_act_or_volume"
+batch_size: 5
+review_interval: 20
+major_review_interval: 999
+snapshot_interval: 10
+chapter_card_policy: "full_preplan"
+
+required_outputs:
+  - Story_Bible
+  - Character_Bible
+  - World_Bible
+  - Volume_Outline
+  - Chapter_Cards
+  - Promise_Ledger
+  - Arc_Tracker
+
+quality_principles:
+  - "卷级目标明确"
+  - "中点反转有力"
+  - "卷尾钩子充分"
+
+specific_gates:
+  - check_midpoint_turn
+  - check_arc_progress
+  - check_volume_payoff

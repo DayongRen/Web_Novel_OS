@@ -1,0 +1,22 @@
+platform: jjwxc_female
+display_name: "晋江女频"
+chapter:
+  recommended_words: [3000, 5000]
+  hook_required: true
+  opening_conflict_required: false
+  max_exposition_ratio: 0.30
+pacing:
+  payoff_interval_chapters: 5
+  major_turn_interval_chapters: 15
+  emotional_beat_required: true
+  cliffhanger: "optional"
+style:
+  sentence_density: "medium_high"
+  dialogue_ratio: "high"
+  inner_monologue: "high"
+  description: "rich"
+  emotional_texture: "fine"
+opening_rules:
+  - "前3章建立情感勾连"
+  - "女主形象正面鲜明"
+  - "男主在前5章出场"

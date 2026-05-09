@@ -1,0 +1,36 @@
+template_id: courtroom_reversal_scene
+display_name: "庭审/公开对决反转场景范本"
+applicable_genres: ["suspense_crime", "palace_intrigue", "urban_rebirth"]
+
+structure:
+  phase_1:
+    name: "不利局面建立"
+    beats:
+      - "指控或不利证据清晰呈现"
+      - "反方的逻辑看起来无懈可击"
+      - "围观者的态度倒向反方"
+      - "主角似乎已经输了"
+  phase_2:
+    name: "逐步反击"
+    beats:
+      - "主角开始质疑某个细节"
+      - "第一个细小裂缝出现"
+      - "反方的反应（轻视→微微警惕）"
+  phase_3:
+    name: "决定性证据/推理"
+    beats:
+      - "主角拿出关键证据或完成关键推理"
+      - "场面彻底逆转"
+      - "围观者态度翻转"
+  phase_4:
+    name: "完全胜利"
+    beats:
+      - "反方彻底崩溃或认输"
+      - "主角的最终陈述（可以很解气）"
+      - "公开认定主角正确"
+
+requirements:
+  - "关键证据必须在此前已经出现（公平性）"
+  - "反方的失败要有逻辑依据，不是主角运气好"
+  - "观众/旁观者的反应要有层次"
+  - "最终的结论要有情感分量"

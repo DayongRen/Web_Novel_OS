@@ -1,0 +1,61 @@
+template_id: opening_hook
+display_name: "开篇钩子范本"
+applicable_genres: ["all"]
+
+description: |
+  适用于任何类型的开篇第一章钩子设计结构。
+  目标：让读者在1000字内无法放下。
+
+structure:
+  beat_1:
+    name: "即时场景建立"
+    description: "用感官细节把读者扔进当下，不做背景介绍"
+    technique: "In medias res（从动作中间开始）"
+    avoid: "Once upon a time式的历史铺垫"
+  beat_2:
+    name: "主角处境传达"
+    description: "用行动/对话/环境传达主角当前状态，不用说教"
+    technique: "Show don't tell"
+    avoid: "大段内心独白解释背景"
+  beat_3:
+    name: "冲突或异常"
+    description: "在500字内出现打破平衡的事件或信息"
+    technique: "打破现状 / 威胁到来 / 谜团出现"
+    avoid: "500字内只有描述，没有事件"
+  beat_4:
+    name: "角色决定或反应"
+    description: "主角必须做出选择或反应，展示性格"
+    technique: "选择揭示人物（character is choice）"
+    avoid: "主角纯粹被动接受一切"
+  beat_5:
+    name: "章末强钩子"
+    description: "最后一句话让读者必须翻下一章"
+    technique: "问题、悬念、反转、揭露"
+    avoid: "以平静描述结尾"
+
+variations:
+  rebirth_opening:
+    beat_1: "主角在临死/人生最低点的感知"
+    beat_2: "突然意识到自己回到了过去"
+    beat_3: "感官细节确认（时间/地点/年龄）"
+    beat_4: "主角做出第一个与前世不同的选择"
+    beat_5: "前世最深的遗憾/仇恨在眼前出现"
+  power_awakening_opening:
+    beat_1: "主角被羞辱或面临危机"
+    beat_2: "环境/身体出现异常变化"
+    beat_3: "主角意识到异常"
+    beat_4: "第一次尝试使用或了解异能"
+    beat_5: "更大危机到来，恰好此时异能爆发的可能性"
+  mystery_opening:
+    beat_1: "不寻常的事件或发现"
+    beat_2: "初步调查或反应"
+    beat_3: "发现更深层的异常"
+    beat_4: "主角做出进入谜团的决定"
+    beat_5: "第一条真正的线索或第一个谜团扩大"
+
+quality_checklist:
+  - "第一段有感官细节（视/听/触/嗅/味至少2种）"
+  - "500字内有事件发生"
+  - "读者在1000字内能猜到类型"
+  - "主角在1000字内展示至少1个性格特征"
+  - "章末最后一句有悬念或张力"

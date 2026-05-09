@@ -1,0 +1,116 @@
+project:
+  title: "Untitled Novel"
+  language: "zh-CN"
+  target_platform: "general_webnovel"
+  target_word_count: 800000
+  target_chapter_count: 400
+  words_per_chapter: 2000
+
+model:
+  provider: "anthropic"
+  name: "claude-opus-4-5"
+  max_tokens: 8000
+  max_retries: 3
+  retry_base_delay: 2.0
+  timeout: 120.0
+
+genre:
+  primary: "urban_rebirth"
+  secondary:
+    - "business"
+    - "romance_subline"
+    - "family_redemption"
+
+reader:
+  target_reader: "male_frequency_webnovel"
+  expected_experience:
+    - "爽感"
+    - "逆袭"
+    - "情绪补偿"
+    - "商业成长"
+    - "遗憾修复"
+
+source:
+  use_user_idea: true
+  user_idea_file: "project_repo/outlines/00_core_idea.md"
+  use_reference_templates: true
+  reference_mode: "structural_only"
+  allow_style_imitation: false
+  allow_plot_copying: false
+
+structure:
+  beat_sheet: "1m_long_serial"
+  opening_chapters_detailed: 30
+  batch_write_chapters: 5
+  volume_size_chapters: 80
+
+pacing:
+  small_payoff_every_chapters: 2
+  medium_payoff_every_chapters: 8
+  major_payoff_every_chapters: 30
+  cliffhanger_required: true
+  max_exposition_ratio: 0.18
+  min_conflict_per_chapter: 1
+
+character:
+  protagonist_must_be_active: true
+  no_forced_idiot_plot: true
+  no_random_betrayal_without_motive: true
+  track_character_arc: true
+
+continuity:
+  track_timeline: true
+  track_items: true
+  track_relationships: true
+  track_power_levels: true
+  track_open_threads: true
+  auto_extract_canon_delta: true
+
+quality_gates:
+  enabled: true
+  stop_on:
+    continuity_fail: false
+    character_consistency_fail: false
+    overdue_major_promise: true
+    missing_chapter_hook: false
+  max_open_promises: 12
+  max_high_urgency_open: 3
+  water_chapter_ratio_over: 0.30
+  run_gate_every_n_chapters: 5
+  final_stage_requires_all_pass: true
+
+agent_activation:
+  showrunner: true
+  genre_strategist: true
+  plot_architect: true
+  character_keeper: true
+  worldbuilding_keeper: true
+  power_system_designer:
+    enabled_for:
+      - xuanhuan_upgrade
+      - xianxia_sect
+      - infinite_flow
+      - sci_fi_mecha
+    disabled_for:
+      - urban_rebirth
+      - romance_ceo
+      - historical_farming
+      - school_youth
+      - suspense_crime
+      - palace_intrigue
+      - short_drama_revenge
+  chapter_writer: true
+  dialogue_agent: true
+  pacing_doctor: true
+  promise_payoff_validator: true
+  continuity_checker: true
+  style_keeper: true
+  commercial_hook_agent: true
+  red_team_reviewer: true
+
+safety_and_quality:
+  no_plagiarism: true
+  no_copy_specific_existing_plot: true
+  no_unresolved_major_promise: true
+  no_setting_break: true
+  no_character_break_without_cause: true

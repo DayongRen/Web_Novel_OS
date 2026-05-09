@@ -1,0 +1,32 @@
+name: "30k 短篇"
+word_range: [0, 50000]
+chapter_range: [5, 25]
+structure: "single_arc"
+batch_size: 3
+review_interval: 5
+major_review_interval: 999
+snapshot_interval: 5
+chapter_card_policy: "full_preplan"
+
+required_outputs:
+  - Story_Bible
+  - Chapter_Outline
+  - Manuscript
+
+forbidden_outputs:
+  - Power_System_Ledger
+  - Faction_Ledger
+  - Series_Bible
+
+quality_principles:
+  - "不铺大世界观"
+  - "不放太多支线"
+  - "人物不超过 5 个"
+  - "冲突高度集中"
+  - "每章必须有转折"
+  - "结局必须封闭"
+
+specific_gates:
+  - check_no_overexpansion
+  - check_ending_closure
+  - check_chapter_count_not_exceed

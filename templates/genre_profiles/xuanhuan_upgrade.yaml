@@ -1,0 +1,93 @@
+genre: xuanhuan_upgrade
+display_name: "玄幻升级文"
+target_gender: male
+typical_length: 1000000-3000000
+
+core_promises:
+  - id: weak_to_strong
+    description: "从被欺辱的弱者成长为不可撼动的强者"
+    first_payoff_latest_chapter: 10
+  - id: power_progression
+    description: "清晰可见的战力成长轨迹"
+    first_payoff_latest_chapter: 5
+  - id: hidden_identity_or_bloodline
+    description: "隐藏的身世/血脉/资质最终揭露"
+    first_payoff_latest_chapter: 80
+  - id: sect_conflict
+    description: "在宗门/学院/组织中的竞争与崛起"
+    first_payoff_latest_chapter: 30
+  - id: treasure_discovery
+    description: "发现和获取稀世宝物"
+    first_payoff_latest_chapter: 15
+  - id: tournament_payoff
+    description: "在比武/考核/大赛中逆袭获胜"
+    first_payoff_latest_chapter: 40
+  - id: revenge_fate_reversal
+    description: "对曾经欺辱过主角的人复仇"
+    first_payoff_latest_chapter: 50
+
+power_system:
+  required_elements:
+    - "明确的修炼等级（至少8级，最好12级以上）"
+    - "每级的具体表现（战力差距可感知）"
+    - "升级所需资源/条件/时间"
+    - "瓶颈设计（不能随意突破）"
+    - "力量的代价（丹药副作用/根骨损耗等）"
+    - "等级碾压的明显感（高级vs低级的恐怖）"
+  forbidden:
+    - "无限制无理由的突然突破"
+    - "等级标准随剧情随意变动"
+    - "主角天生碾压所有人毫无障碍"
+
+opening_requirements:
+  first_chapter:
+    - "主角被轻视或面临危机"
+    - "展示主角当前的弱小和处境"
+    - "出现一个明确的欺压/不公事件"
+    - "暗示主角有隐藏潜力（小异常）"
+    - "最后一行有翻转可能的钩子"
+  first_3_chapters:
+    - "建立起点屈辱（读者愤怒感）"
+    - "第一次获得成长机遇"
+    - "对抗的最终目标初步呈现"
+  first_10_chapters:
+    - "第一次实质性变强"
+    - "引入宗门/学院/核心舞台"
+    - "建立中期目标（成为XXX）"
+
+arc_structure:
+  new_disciple_arc:
+    chapter_range: "1-50"
+    function: "建立屈辱起点，完成初次蜕变，与本地强者形成对立"
+  sect_rise_arc:
+    chapter_range: "51-200"
+    function: "扩大世界视野，宗门内崛起，引入真正的强者参照系"
+  kingdom_arc:
+    chapter_range: "201-500"
+    function: "走出宗门，踏上更大舞台，揭露隐藏身世"
+  continent_arc:
+    chapter_range: "501-1000"
+    function: "大陆级别的争霸，触碰世界真相"
+
+avoid:
+  - "等级不清晰（读者不知道强弱）"
+  - "随意给主角神器没有代价"
+  - "无尽训练章节没有情节推进"
+  - "反派重复使用同一羞辱方式"
+  - "主角性格扁平（除了变强没有其他内容）"
+  - "女性角色只负责崇拜主角"
+  - "战斗描写缺乏策略，只靠暴力碾压"
+
+chapter_end_patterns:
+  - "境界突破前夜"
+  - "更强敌人出现"
+  - "秘密即将揭露"
+  - "险境中发现转机"
+  - "意外获得稀世资源"
+
+pacing:
+  small_payoff_every_chapters: 3
+  medium_payoff_every_chapters: 10
+  major_payoff_every_chapters: 40
+  cliffhanger_frequency: high
+  battle_chapter_ratio: 0.3

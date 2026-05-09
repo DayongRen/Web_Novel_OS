@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Novel Studio — Web Novel OS</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<!-- ── 顶栏 ── -->
+<header class="topbar">
+  <div class="topbar-left">
+    <span class="logo">📚 Novel Studio</span>
+    <span class="version">v0.1</span>
+  </div>
+  <nav class="topbar-nav">
+    <button class="nav-btn active" data-page="home">首页</button>
+    <button class="nav-btn" data-page="projects">项目</button>
+    <button class="nav-btn" data-page="sessions">沙盒</button>
+    <button class="nav-btn" data-page="write">写作</button>
+    <button class="nav-btn" data-page="health">健康度</button>
+  </nav>
+  <div class="topbar-right">
+    <span id="status-dot" class="dot green"></span>
+    <span id="status-text">就绪</span>
+  </div>
+</header>
+
+<!-- ── 主内容 ── -->
+<main id="main">
+
+  <!-- ── 首页 ── -->
+  <section id="page-home" class="page active">
+    <div class="hero">
+      <h1>你想做什么？</h1>
+      <p class="subtitle">选择一个任务开始，或从已有项目继续</p>
+    </div>
+    <div class="task-grid">
+      <div class="task-card" data-action="new-project">
+        <div class="task-icon">✨</div>
+        <div class="task-title">我有一个小说想法</div>
+        <div class="task-desc">从一句话创意开始，系统引导你完成完整项目框架</div>
+      </div>
+      <div class="task-card" data-action="continue-project">
+        <div class="task-icon">📖</div>
+        <div class="task-title">继续已有项目</div>
+        <div class="task-desc">选择项目，继续写章节或修改设定</div>
+      </div>
+      <div class="task-card" data-action="gen-options">
+        <div class="task-icon">🎯</div>
+        <div class="task-title">生成多个故事方案</div>
+        <div class="task-desc">给我三个不同方向的故事框架，我来选</div>
+      </div>
+      <div class="task-card" data-action="write-chapters">
+        <div class="task-icon">✍️</div>
+        <div class="task-title">写下一批章节</div>
+        <div class="task-desc">继续创作，系统自动校验节奏和连续性</div>
+      </div>
+      <div class="task-card" data-action="check-health">
+        <div class="task-icon">🏥</div>
+        <div class="task-title">检查项目健康度</div>
+        <div class="task-desc">检查水章、逾期承诺、设定冲突等问题</div>
+      </div>
+      <div class="task-card" data-action="rewrite-chapter">
+        <div class="task-icon">🔧</div>
+        <div class="task-title">重写某一章</div>
+        <div class="task-desc">加强爽点、调整节奏、优化对白</div>
+      </div>
+    </div>
+    <div class="recent-projects" id="recent-projects">
+      <h2>最近项目</h2>
+      <div id="recent-list" class="project-list"></div>
+    </div>
+  </section>
+
+  <!-- ── 对话式创意引导 ── -->
+  <section id="page-dialogue" class="page">
+    <div class="dialogue-layout">
+      <div class="dialogue-main">
+        <div class="dialogue-header">
+          <button class="btn-back" id="back-from-dialogue">← 返回</button>
+          <h2 id="dialogue-title">创意引导</h2>
+          <span class="phase-badge" id="phase-badge">收集中</span>
+        </div>
+        <div class="chat-window" id="chat-window">
+          <!-- 消息由 JS 动态插入 -->
+        </div>
+        <div class="chat-input-area" id="chat-input-area" style="display:none">
+          <div class="option-cards" id="option-cards"></div>
+          <div class="custom-input-row">
+            <input type="text" id="custom-input" placeholder="或者自定义输入…" />
+            <button class="btn-send" id="btn-send">发送</button>
+          </div>
+        </div>
+        <div class="generate-cta" id="generate-cta" style="display:none">
+          <p>已收集足够信息，可以开始生成了！</p>
+          <div class="cta-buttons">
+            <button class="btn-primary" id="btn-gen-bible">生成故事圣经</button>
+            <button class="btn-secondary" id="btn-gen-options">先看3个故事方案</button>
+          </div>
+        </div>
+      </div>
+      <div class="dialogue-sidebar">
+        <h3>已确认设定</h3>
+        <div id="collected-display" class="collected-list"></div>
+        <div class="sidebar-actions" style="margin-top:16px">
+          <button class="btn-sm" id="btn-save-session">保存会话</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 方案候选 ── -->
+  <section id="page-options" class="page">
+    <div class="options-header">
+      <button class="btn-back" id="back-from-options">← 返回</button>
+      <h2>选择故事方案</h2>
+      <button class="btn-secondary" id="btn-regen-options">重新生成</button>
+    </div>
+    <div id="options-loading" class="loading-state">
+      <div class="spinner"></div>
+      <p>正在生成候选方案，请稍候…</p>
+    </div>
+    <div id="options-grid" class="options-grid" style="display:none"></div>
+    <div class="options-actions" id="options-actions" style="display:none">
+      <button class="btn-primary" id="btn-accept-option">采用选中方案</button>
+      <button class="btn-secondary" id="btn-merge-options">融合方案（说说你的想法）</button>
+    </div>
+    <div class="merge-panel" id="merge-panel" style="display:none">
+      <textarea id="merge-input" placeholder="例如：采用方案A的开局节奏，但融入方案C的反派设定…"></textarea>
+      <button class="btn-primary" id="btn-submit-merge">确认融合</button>
+    </div>
+  </section>
+
+  <!-- ── 项目列表 ── -->
+  <section id="page-projects" class="page">
+    <div class="page-header">
+      <h2>我的项目</h2>
+      <button class="btn-primary" id="btn-new-project-2">+ 新建项目</button>
+    </div>
+    <div id="projects-grid" class="projects-grid"></div>
+  </section>
+
+  <!-- ── 写作页 ── -->
+  <section id="page-write" class="page">
+    <div class="write-layout">
+      <div class="chapter-sidebar">
+        <div class="sidebar-header">
+          <select id="project-select" class="project-select"></select>
+        </div>
+        <div id="chapter-list" class="chapter-list"></div>
+        <div class="sidebar-footer">
+          <button class="btn-primary btn-full" id="btn-write-next">写下一章</button>
+          <button class="btn-secondary btn-full" id="btn-write-batch">批量写5章</button>
+        </div>
+      </div>
+      <div class="write-main">
+        <div class="chapter-card-panel" id="chapter-card-panel">
+          <div class="card-empty">
+            <p>选择左侧章节查看章节卡片</p>
+            <p class="hint">章节卡片是每章写作的执行框架</p>
+          </div>
+        </div>
+        <div class="chapter-content-panel" id="chapter-content-panel">
+          <div class="content-toolbar">
+            <span id="current-chapter-label">—</span>
+            <div class="toolbar-actions">
+              <button class="btn-sm" id="btn-rewrite-full">重写全章</button>
+              <button class="btn-sm" id="btn-rewrite-ending">重写结尾</button>
+              <button class="btn-sm" id="btn-strengthen-payoff">加强爽点</button>
+              <button class="btn-sm" id="btn-lighten">降低沉重感</button>
+            </div>
+          </div>
+          <div class="content-viewer" id="content-viewer">
+            <div class="content-placeholder">章节正文将在此显示</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 健康度页 ── -->
+  <section id="page-health" class="page">
+    <div class="page-header">
+      <h2>项目健康度</h2>
+      <select id="health-project-select" class="project-select"></select>
+      <button class="btn-primary" id="btn-run-health">重新检查</button>
+    </div>
+    <div id="health-dashboard" class="health-dashboard">
+      <div class="health-empty">选择一个项目查看健康度</div>
+    </div>
+  </section>
+
+  <!-- ── 沙盒历史 ── -->
+  <section id="page-sessions" class="page">
+    <div class="page-header">
+      <h2>沙盒历史</h2>
+      <span class="hint">所有生成结果先存沙盒，点"采纳"后才进入正式项目</span>
+    </div>
+    <div id="sessions-list" class="sessions-list"></div>
+  </section>
+
+</main>
+
+<!-- ── 模态框：新建项目 ── -->
+<div id="modal-new-project" class="modal-overlay" style="display:none">
+  <div class="modal">
+    <div class="modal-header">
+      <h3>新建项目</h3>
+      <button class="modal-close" id="close-new-project">✕</button>
+    </div>
+    <div class="modal-body">
+      <label>项目名称
+        <input type="text" id="np-name" placeholder="例如：北地无夫" />
+      </label>
+      <label>一句话想法
+        <textarea id="np-idea" rows="3" placeholder="随便说，系统会帮你扩展…"></textarea>
+      </label>
+      <label>类型
+        <select id="np-genre"></select>
+      </label>
+      <div class="form-row">
+        <label>目标字数
+          <input type="number" id="np-words" value="800000" step="100000" />
+        </label>
+        <label>目标章数
+          <input type="number" id="np-chapters" value="400" step="50" />
+        </label>
+      </div>
+      <label>目标平台
+        <select id="np-platform">
+          <option value="general_webnovel">综合网文</option>
+          <option value="tomato">番茄小说</option>
+          <option value="qidian">起点中文网</option>
+          <option value="jjwxc">晋江文学城</option>
+          <option value="short_drama">短剧</option>
+          <option value="zhihu">知乎故事</option>
+        </select>
+      </label>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-secondary" id="cancel-new-project">取消</button>
+      <button class="btn-primary" id="confirm-new-project">创建项目并开始引导</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── 模态框：文件预览 ── -->
+<div id="modal-file-preview" class="modal-overlay" style="display:none">
+  <div class="modal modal-wide">
+    <div class="modal-header">
+      <h3 id="preview-title">文件预览</h3>
+      <div class="modal-header-actions">
+        <button class="btn-primary btn-sm" id="btn-accept-file">采纳此文件</button>
+        <button class="modal-close" id="close-preview">✕</button>
+      </div>
+    </div>
+    <div class="modal-body">
+      <pre id="preview-content" class="file-preview"></pre>
+    </div>
+  </div>
+</div>
+
+<!-- ── 通知 Toast ── -->
+<div id="toast-container" class="toast-container"></div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

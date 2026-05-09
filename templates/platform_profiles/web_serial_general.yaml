@@ -1,0 +1,19 @@
+platform: web_serial_general
+display_name: "通用网文"
+chapter:
+  recommended_words: [2000, 3000]
+  hook_required: true
+  opening_conflict_required: true
+  max_exposition_ratio: 0.25
+pacing:
+  payoff_interval_chapters: 3
+  major_turn_interval_chapters: 12
+  cliffhanger: "recommended"
+style:
+  sentence_density: "medium"
+  dialogue_ratio: "medium"
+  inner_monologue: "medium"
+  description: "moderate"
+opening_rules:
+  - "前1000字必须有事件"
+  - "前3章建立核心矛盾"

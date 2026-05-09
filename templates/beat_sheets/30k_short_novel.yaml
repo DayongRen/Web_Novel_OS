@@ -1,0 +1,66 @@
+name: "30k短篇"
+target_words: 30000
+target_chapters: 15
+words_per_chapter: 2000
+platform: "知乎/短剧/短篇投稿"
+
+description: |
+  适合知乎爽文、短剧文本、短篇复仇、短篇言情、短篇悬疑。
+  不铺大世界观，人物少，冲突集中，爽点密集，每章必有转折。
+
+structure:
+  act_1:
+    chapters: "1-3"
+    goal: "钩子 + 主要冲突建立"
+    requirements:
+      - "第1章：最强钩子，核心矛盾一句话能说清"
+      - "第2章：升级冲突，主角面临最大威胁"
+      - "第3章：第一次反击或关键信息揭露"
+  act_2:
+    chapters: "4-10"
+    goal: "连续升级 + 两次主要反转"
+    requirements:
+      - "第4-6章：矛盾螺旋升级"
+      - "第7章：中点大反转（读者以为要赢，突然危机加倍）"
+      - "第8-10章：主角找到突破口"
+  act_3:
+    chapters: "11-13"
+    goal: "真相揭露 + 最终反击"
+    requirements:
+      - "第11章：所有真相摆上桌"
+      - "第12章：最终决战或对决"
+      - "第13章：主角彻底胜利"
+  act_4:
+    chapters: "14-15"
+    goal: "结局 + 情绪回收"
+    requirements:
+      - "第14章：反派受到惩罚"
+      - "第15章：情感收束，给读者最后的满足感"
+
+key_beats:
+  - chapter: 1
+    type: "opening_hook"
+    description: "核心矛盾展示，最强钩子"
+  - chapter: 3
+    type: "first_victory"
+    description: "第一次小胜利"
+  - chapter: 7
+    type: "midpoint_crisis"
+    description: "中点危机，一切变得更糟"
+  - chapter: 11
+    type: "truth_reveal"
+    description: "关键真相揭露"
+  - chapter: 12
+    type: "climax"
+    description: "最终高潮对决"
+  - chapter: 15
+    type: "resolution"
+    description: "情感完满结局"
+
+rules:
+  - "不铺大世界观"
+  - "不放太多支线"
+  - "人物不超过5个主要人物"
+  - "冲突高度集中"
+  - "爽点密集（每2章一次）"
+  - "每章必须有明显转折"

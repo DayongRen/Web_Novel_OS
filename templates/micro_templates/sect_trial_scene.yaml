@@ -1,0 +1,28 @@
+template_id: sect_trial_scene
+display_name: "宗门考核/试炼场景范本"
+applicable_genres: ["xuanhuan_upgrade", "xianxia_sect"]
+
+structure:
+  phase_1:
+    name: "规则建立"
+    beats:
+      - "考核规则清晰说明"
+      - "强劲竞争者出现（让读者担心）"
+      - "主角的限制和劣势"
+  phase_2:
+    name: "考核过程"
+    beats:
+      - "主角遇到超出预期的挑战"
+      - "主角的独特方法/思路"
+      - "至少一次险些失败"
+  phase_3:
+    name: "逆袭完成"
+    beats:
+      - "意料之外的成绩"
+      - "众人的震惊反应"
+      - "新的对手/认可"
+
+requirements:
+  - "考核挑战要对主角构成真实威胁"
+  - "主角的获胜要靠准备和智慧，不只是天赋"
+  - "输赢有真实后果"
