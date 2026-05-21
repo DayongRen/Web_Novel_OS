@@ -1,5 +1,5 @@
 ---
-name: novel-compiler-pro
+name: novel
 description: Spec-driven Chinese long-form novel compiler for autonomous or semi-autonomous book creation. Use when Codex needs to turn core materials into a complete novel project with SDD specs, smart long-term memory, canon, Part -> Volume -> Chapter -> Scene planning, drafting, reader-experience checks, consistency gates, repair passes, style/deslop passes, and final assembly.
 ---
 
