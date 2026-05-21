@@ -39,7 +39,9 @@ Use them from a novel project root:
 ```bash
 python .codex/skills/novel-compiler-pro/scripts/check_project.py --write-report
 python .codex/skills/novel-compiler-pro/scripts/check_chapters.py --write-report
+python .codex/skills/novel-compiler-pro/scripts/check_repetition.py --write-report
 python .codex/skills/novel-compiler-pro/scripts/word_count.py --write-report
 python .codex/skills/novel-compiler-pro/scripts/build_retrieval_index.py
+python .codex/skills/novel-compiler-pro/scripts/build_milestone_report.py --write-report
 python .codex/skills/novel-compiler-pro/scripts/assemble_final.py --write-report
 ```
