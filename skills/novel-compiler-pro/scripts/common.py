@@ -42,6 +42,8 @@ REQUIRED_FILES = {
         "reader_promise.md",
         "open_threads.md",
         "retrieval_index.md",
+        "repetition_guard.md",
+        "rolling_100k_state.md",
     ],
     "canon": [
         "world.md",
@@ -73,6 +75,7 @@ REQUIRED_FILES = {
         "volume_plan.md",
         "chapter_plan.md",
         "scene_plan.md",
+        "rolling_100k_plan.md",
     ],
     "reports": [
         "compile_log.md",
@@ -82,6 +85,8 @@ REQUIRED_FILES = {
         "pacing_report.md",
         "revision_report.md",
         "style_report.md",
+        "repetition_report.md",
+        "milestone_100k_report.md",
         "final_consistency_report.md",
         "final_report.md",
     ],
