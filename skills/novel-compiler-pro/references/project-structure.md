@@ -73,6 +73,8 @@ memory/style_anchor.md
 memory/reader_promise.md
 memory/open_threads.md
 memory/retrieval_index.md
+memory/repetition_guard.md
+memory/rolling_100k_state.md
 ```
 
 ## Required Canon Files
@@ -102,6 +104,7 @@ planning/part_plan.md
 planning/volume_plan.md
 planning/chapter_plan.md
 planning/scene_plan.md
+planning/rolling_100k_plan.md
 ```
 
 ## Required Reports
@@ -114,6 +117,8 @@ reports/foreshadowing_report.md
 reports/pacing_report.md
 reports/revision_report.md
 reports/style_report.md
+reports/repetition_report.md
+reports/milestone_100k_report.md
 reports/final_consistency_report.md
 reports/final_report.md
 ```
