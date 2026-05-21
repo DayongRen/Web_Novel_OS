@@ -1,7 +1,7 @@
 interface:
   display_name: "Novel Compiler Pro"
   short_description: "Spec-driven Chinese long-novel compiler with memory and gates"
-  default_prompt: "Use $novel-compiler-pro to compile a Chinese long-form novel from inputs into specs, canon, plans, chapters, reports, and final manuscript."
+  default_prompt: "Use $novel to compile a Chinese long-form novel from inputs into specs, canon, plans, chapters, reports, and final manuscript."
 
 policy:
   allow_implicit_invocation: true
