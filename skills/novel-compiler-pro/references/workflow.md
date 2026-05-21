@@ -15,6 +15,8 @@ constitution
   -> write
   -> update memory/canon
   -> quality gates
+  -> anti-repetition gate
+  -> 100k milestone review when due
   -> repair
   -> analyze
   -> final assembly
@@ -159,10 +161,57 @@ For each chapter:
 6. Run mechanical gates:
    ```bash
    python .codex/skills/novel-compiler-pro/scripts/check_chapters.py --write-report
+   python .codex/skills/novel-compiler-pro/scripts/check_repetition.py --write-report
    python .codex/skills/novel-compiler-pro/scripts/word_count.py --write-report
    python .codex/skills/novel-compiler-pro/scripts/build_retrieval_index.py
    ```
-7. Run semantic gates.
+7. Update `memory/repetition_guard.md` with recent patterns and the next required state increment.
+8. Run semantic gates.
+
+## 7.5 Anti-Repetition Pass
+
+Use [anti-repetition.md](anti-repetition.md) before and after each batch.
+
+Before drafting:
+
+- load summaries, canon, active plans, and at most the latest 1-2 full chapters
+- require a concrete state increment
+- list what recent pattern must not repeat
+
+After drafting:
+
+- run `scripts/check_repetition.py --write-report`
+- repair exact repeated passages immediately
+- update `memory/repetition_guard.md`
+
+Do not continue a long generation run when the repetition gate fails.
+
+## 7.6 100k Milestone Review
+
+Use [milestone-100k.md](milestone-100k.md) whenever the manuscript crosses a 100k-word/character block boundary.
+
+Run:
+
+```bash
+python .codex/skills/novel-compiler-pro/scripts/build_milestone_report.py --write-report
+```
+
+Then write or update:
+
+```text
+reports/milestone_100k_report.md
+memory/rolling_100k_state.md
+planning/rolling_100k_plan.md
+```
+
+Before starting the next 100k block:
+
+1. summarize what has happened in the completed block
+2. compare the block against `planning/book_plan.md`, `plot_spine.md`, `part_plan.md`, and `volume_plan.md`
+3. identify drift, repeated patterns, delayed promises, and missing state changes
+4. re-read the whole architecture at summary level, not by loading all prose
+5. generate the next 100k block brief
+6. update chapter/scene plans for the next block
 
 ## 8. Analyze
 
@@ -190,6 +239,8 @@ reports/final_report.md
 Use the assembly script:
 
 ```bash
+python .codex/skills/novel-compiler-pro/scripts/check_repetition.py --write-report
+python .codex/skills/novel-compiler-pro/scripts/build_milestone_report.py --write-report
 python .codex/skills/novel-compiler-pro/scripts/assemble_final.py --write-report
 ```
 
