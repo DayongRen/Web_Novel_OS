@@ -132,6 +132,45 @@ Statuses:
 疑似遗忘
 ```
 
+### `memory/repetition_guard.md`
+
+The anti-copy-paste state file.
+
+Maintain:
+
+- recent 5 chapter scene functions
+- recent 5 opening patterns
+- recent 5 ending hook types
+- repeated motions, images, sentence habits, and dialogue moves
+- what the next chapter must not repeat
+- the exact state increment required before drafting
+
+Before drafting, read this file and answer:
+
+```text
+What changes in this chapter that was not true before?
+What recent pattern must this chapter avoid?
+What new pressure, cost, decision, or information does the chapter add?
+```
+
+If the answers are vague, repair `planning/chapter_plan.md` or `planning/scene_plan.md` before drafting.
+
+### `memory/rolling_100k_state.md`
+
+The current 100k-word block state.
+
+Maintain:
+
+- block number and target range
+- chapters included in the current block
+- estimated current word/character count
+- current block objective
+- previous block summary
+- architecture comparison notes
+- next block replan trigger
+
+When a 100k boundary is reached, update this file before continuing.
+
 ### `memory/retrieval_index.md`
 
 A lightweight retrieval map when no script/RAG system exists.
@@ -183,6 +222,8 @@ Before drafting a chapter, load only the files that matter:
 - `memory/novel_state.md`
 - `memory/style_anchor.md`
 - `memory/next_chapter_task.md`
+- `memory/repetition_guard.md`
+- `memory/rolling_100k_state.md`
 - relevant canon files
 - relevant chapter and scene plan
 
