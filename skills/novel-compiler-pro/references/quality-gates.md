@@ -9,6 +9,7 @@ Run the mechanical gate scripts before semantic review whenever possible:
 ```bash
 python .codex/skills/novel-compiler-pro/scripts/check_project.py --write-report
 python .codex/skills/novel-compiler-pro/scripts/check_chapters.py --write-report
+python .codex/skills/novel-compiler-pro/scripts/check_repetition.py --write-report
 python .codex/skills/novel-compiler-pro/scripts/word_count.py --write-report
 ```
 
@@ -16,9 +17,11 @@ Script outputs:
 
 - `reports/project_gate_report.md`
 - `reports/chapter_gate_report.md`
+- `reports/repetition_report.md`
 - `reports/word_count_report.md`
 
 Scripts can detect missing structure, invalid filenames, numbering gaps, duplicate chapter numbers, rough word counts, and obvious draft residue. After scripts pass or warn, perform the semantic checks below.
+Repetition gates catch exact and near-structural repetition; they do not replace semantic anti-repetition review.
 
 ## Chapter Gate
 
@@ -49,6 +52,8 @@ If high severity appears, repair before continuing.
 Run every 3-5 chapters or after each volume.
 
 Write `reports/consistency_report.md`.
+
+Also run `scripts/check_repetition.py --write-report` after every batch. If it returns `FAIL`, repair repeated text or repeated scene function before drafting more chapters.
 
 Issue table:
 
@@ -122,6 +127,15 @@ Severity:
 - delayed story movement
 - overlong transition
 
+### Repetition
+
+- repeated passage across chapters
+- same opening image or sentence form
+- same ending hook type without escalation
+- repeated scene sequence such as investigate -> blocked -> tiny clue
+- repeated emotional beat without new cost
+- repeated stock phrase or body action
+
 ## Repair Pass
 
 Write `reports/revision_report.md`.
@@ -191,7 +205,9 @@ Before final semantic review, run:
 ```bash
 python .codex/skills/novel-compiler-pro/scripts/check_project.py --write-report
 python .codex/skills/novel-compiler-pro/scripts/check_chapters.py --write-report
+python .codex/skills/novel-compiler-pro/scripts/check_repetition.py --write-report
 python .codex/skills/novel-compiler-pro/scripts/build_retrieval_index.py
+python .codex/skills/novel-compiler-pro/scripts/build_milestone_report.py --write-report
 python .codex/skills/novel-compiler-pro/scripts/assemble_final.py --write-report
 ```
 
