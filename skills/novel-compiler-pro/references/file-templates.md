@@ -200,3 +200,125 @@ Allowed statuses:
 
 ## File List
 ```
+
+## `memory/repetition_guard.md`
+
+```markdown
+# Repetition Guard
+
+## Recent Context Loading Rule
+
+- Load summaries and canon first.
+- Load at most the latest 1-2 full chapters unless doing an audit.
+- Never paste a large old chapter block as style fuel.
+
+## Recent 5 Chapters: Scene Functions Used
+
+## Recent 5 Chapters: Opening Patterns Used
+
+## Recent 5 Chapters: Ending Hooks Used
+
+## Recent 5 Chapters: Repeated Motions / Images / Phrases
+
+## Do Not Repeat Next
+
+## Next Chapter Required State Increment
+
+- World state:
+- Character state:
+- Relationship state:
+- Information state:
+- Reader expectation:
+```
+
+## `memory/rolling_100k_state.md`
+
+```markdown
+# Rolling 100k State
+
+## Current Block
+
+- Block number:
+- Target range:
+- Current word/char estimate:
+- Start chapter:
+- Latest chapter:
+
+## Previous Block Summary
+
+## Current Block Must Accomplish
+
+## Current Block Must Not Repeat
+
+## Architecture Comparison Notes
+
+## Next Block Replan Trigger
+```
+
+## `planning/rolling_100k_plan.md`
+
+```markdown
+# Rolling 100k Plan
+
+## Whole-Book Architecture Snapshot
+
+## Completed Blocks
+
+## Current 100k Block Plan
+
+## Difference From Original Architecture
+
+## Next 100k Block Plan
+
+## Risks Before Continuing
+```
+
+## `reports/repetition_report.md`
+
+```markdown
+# Repetition Report
+
+| ID | Severity | Type | Location | Problem | Evidence | Suggested Fix | Status |
+|---|---|---|---|---|---|---|---|
+```
+
+## `reports/scene_density_report.md`
+
+```markdown
+# Scene Density Report
+
+| ID | Severity | Type | Location | Problem | Evidence | Suggested Fix | Status |
+|---|---|---|---|---|---|---|---|
+```
+
+## `reports/anti_ai_style_report.md`
+
+```markdown
+# Anti-AI Style Report
+
+## Summary
+
+## Banned Sentence Patterns
+
+## Abstract Emotion Labels
+
+## Summary-Like Paragraphs
+
+## Required Rewrites
+```
+
+## `reports/milestone_100k_report.md`
+
+```markdown
+# 100k Milestone Report
+
+## Current Block Map
+
+## What Has Happened
+
+## Architecture Comparison
+
+## Drift / Repetition Risks
+
+## Next 100k Generation Brief
+```
