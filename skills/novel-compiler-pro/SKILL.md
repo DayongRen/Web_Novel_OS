@@ -1,6 +1,6 @@
 ---
 name: novel
-description: Spec-driven Chinese long-form novel compiler for autonomous or semi-autonomous book creation. Use when Codex needs to turn core materials into a complete novel project with SDD specs, smart long-term memory, canon, Part -> Volume -> Chapter -> Scene planning, drafting, anti-repetition guards, 100k-word milestone reviews, reader-experience checks, consistency gates, repair passes, style/deslop passes, and final assembly.
+description: Spec-driven Chinese long-form novel compiler for autonomous or semi-autonomous book creation. Use when Codex needs to turn core materials into a complete novel project with SDD specs, smart long-term memory, canon, Part -> Volume -> Chapter -> Scene planning, drafting, scene-driven narrative mode, anti-summary and anti-AI prose guards, anti-repetition guards, 100k-word milestone reviews, reader-experience checks, consistency gates, repair passes, style/deslop passes, and final assembly.
 ---
 
 # Novel Compiler Pro
@@ -18,6 +18,11 @@ Use four layers together:
 3. **Canon-driven compile**: canon is the authority for world, characters, timeline, terminology, relationships, and foreshadowing.
 4. **Reader experience gates**: check hooks, emotional payoff, expectation, platform fit, pacing, and AI-flavored prose.
 5. **Anti-repetition + milestone control**: prevent copy-paste drift and reset planning every 100k words.
+6. **Scene-driven narrative mode**: dramatize plans into visible scenes, not summaries, essays, or thematic explanations.
+
+## Highest Writing Rule
+
+If a draft reads like a synopsis, essay, commentary, review, or chapter summary, it has failed. Rewrite it as a scene.
 
 ## Operating Mode
 
@@ -107,10 +112,12 @@ Use this pipeline:
 11. repair pass
 12. reader-experience pass
 13. anti-repetition pass
-14. 100k milestone review when a block boundary is reached
-15. style/deslop pass
-16. final consistency check
-17. final assembly
+14. anti-AI narrative / scene-density pass
+15. Anti-AI Rewriter pass when needed
+16. 100k milestone review when a block boundary is reached
+17. style/deslop pass
+18. final consistency check
+19. final assembly
 ```
 
 Detailed rules live in:
@@ -119,6 +126,8 @@ Detailed rules live in:
 - [state-system.md](references/state-system.md): Smart State and long-term memory.
 - [quality-gates.md](references/quality-gates.md): consistency, repair, style, and final gates.
 - [reader-experience.md](references/reader-experience.md): hooks, emotional payoff, platform fit, and deslop checks.
+- [anti-ai-narrative.md](references/anti-ai-narrative.md): scene mode, anti-summary rule, show-don't-tell ratio, ban list, scene beat workflow, and scene density check.
+- [anti-ai-rewriter-agent.md](references/anti-ai-rewriter-agent.md): final rewrite role that converts summary-like drafts into visible narrative scenes.
 - [anti-repetition.md](references/anti-repetition.md): context hygiene, state increment, and repetition repair.
 - [milestone-100k.md](references/milestone-100k.md): 100k-word block summaries and next-block replanning.
 - [file-templates.md](references/file-templates.md): required file templates.
@@ -130,6 +139,7 @@ Prefer these no-dependency scripts for mechanical checks and assembly before doi
 ```text
 scripts/check_project.py          # required folders/files gate
 scripts/check_chapters.py         # filename, numbering, word-count, draft-residue gate
+scripts/check_scene_density.py    # scene mode, anti-summary, ban-list, dialogue, ending gate
 scripts/check_repetition.py       # repeated passage/opening/ending gate
 scripts/word_count.py             # chapter and manuscript word/character counts
 scripts/build_retrieval_index.py  # lightweight retrieval index and chapter metadata
@@ -142,6 +152,7 @@ Run scripts from the novel project root, for example:
 ```bash
 python .codex/skills/novel-compiler-pro/scripts/check_project.py --write-report
 python .codex/skills/novel-compiler-pro/scripts/check_chapters.py --write-report
+python .codex/skills/novel-compiler-pro/scripts/check_scene_density.py --write-report
 python .codex/skills/novel-compiler-pro/scripts/check_repetition.py --write-report
 python .codex/skills/novel-compiler-pro/scripts/build_retrieval_index.py
 python .codex/skills/novel-compiler-pro/scripts/build_milestone_report.py --write-report
@@ -160,9 +171,12 @@ Always enforce:
 4. **Character guard**: actions must match desire, fear, knowledge, pressure, relationships, and bottom lines.
 5. **Foreshadowing guard**: major turns require 2-3 light setups and must be recoverable by readers.
 6. **Reader guard**: every chapter must offer goal, resistance, change, and a reason to keep reading.
-7. **Anti-repetition guard**: do not load whole old chapters as style fuel; require a new state increment and run repetition gates before continuing.
-8. **100k milestone guard**: after each 100k-word block, summarize what has happened, compare against the whole architecture, and re-plan the next block before drafting.
-9. **Deslop guard**: final prose must not contain meta notes, TODOs, generic AI cadence, essay tone, or explanation-heavy dialogue.
+7. **Scene mode guard**: write scenes, not summaries; render plot through action, dialogue, objects, space, silence, conflict, and visible choice.
+8. **Show-don't-tell guard**: at least 80% of prose must be dramatized; abstract explanation is allowed only when brief and necessary.
+9. **Anti-AI style guard**: ban commentary-style sentences such as "这不仅是……更是……", "他终于意识到……", "真正的问题在于……", and theme explanation.
+10. **Anti-repetition guard**: do not load whole old chapters as style fuel; require a new state increment and run repetition gates before continuing.
+11. **100k milestone guard**: after each 100k-word block, summarize what has happened, compare against the whole architecture, and re-plan the next block before drafting.
+12. **Deslop guard**: final prose must not contain meta notes, TODOs, generic AI cadence, essay tone, or explanation-heavy dialogue.
 
 ## Completion Criteria
 
