@@ -15,6 +15,7 @@ constitution
   -> write
   -> update memory/canon
   -> quality gates
+  -> scene-density / anti-AI narrative gate
   -> anti-repetition gate
   -> 100k milestone review when due
   -> repair
@@ -161,12 +162,35 @@ For each chapter:
 6. Run mechanical gates:
    ```bash
    python .codex/skills/novel-compiler-pro/scripts/check_chapters.py --write-report
+   python .codex/skills/novel-compiler-pro/scripts/check_scene_density.py --write-report
    python .codex/skills/novel-compiler-pro/scripts/check_repetition.py --write-report
    python .codex/skills/novel-compiler-pro/scripts/word_count.py --write-report
    python .codex/skills/novel-compiler-pro/scripts/build_retrieval_index.py
    ```
 7. Update `memory/repetition_guard.md` with recent patterns and the next required state increment.
 8. Run semantic gates.
+
+## 7.4 Scene Mode / Anti-AI Narrative Pass
+
+Use [anti-ai-narrative.md](anti-ai-narrative.md) before and after every draft.
+
+Before writing, internally build the scene beat plan:
+
+```text
+opening image -> immediate tension -> character objective -> obstruction -> escalation -> concrete turning point -> ending image
+```
+
+Do not output the beat plan unless requested.
+
+Draft the chapter as publishable, scene-driven prose. The outline must be dramatized into events, not restated as explanation.
+
+After drafting, run:
+
+```bash
+python .codex/skills/novel-compiler-pro/scripts/check_scene_density.py --write-report
+```
+
+If more than 2 scene-density checks fail, or if banned summary patterns appear, run the Anti-AI Rewriter role described in [anti-ai-rewriter-agent.md](anti-ai-rewriter-agent.md). Output only the revised chapter.
 
 ## 7.5 Anti-Repetition Pass
 
@@ -240,6 +264,7 @@ Use the assembly script:
 
 ```bash
 python .codex/skills/novel-compiler-pro/scripts/check_repetition.py --write-report
+python .codex/skills/novel-compiler-pro/scripts/check_scene_density.py --write-report
 python .codex/skills/novel-compiler-pro/scripts/build_milestone_report.py --write-report
 python .codex/skills/novel-compiler-pro/scripts/assemble_final.py --write-report
 ```
