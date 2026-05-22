@@ -99,6 +99,8 @@ Preserve:
 - voice traits
 - deliberate style choices
 
+When prose reads like a synopsis, essay, commentary, or chapter summary, use [anti-ai-narrative.md](anti-ai-narrative.md) and [anti-ai-rewriter-agent.md](anti-ai-rewriter-agent.md). Do not treat this as a surface style issue; rewrite the passage into a visible scene.
+
 ## Platform Notes
 
 If `market/` is used, keep:
