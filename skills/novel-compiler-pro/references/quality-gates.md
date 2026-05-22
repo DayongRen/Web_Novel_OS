@@ -9,6 +9,7 @@ Run the mechanical gate scripts before semantic review whenever possible:
 ```bash
 python .codex/skills/novel-compiler-pro/scripts/check_project.py --write-report
 python .codex/skills/novel-compiler-pro/scripts/check_chapters.py --write-report
+python .codex/skills/novel-compiler-pro/scripts/check_scene_density.py --write-report
 python .codex/skills/novel-compiler-pro/scripts/check_repetition.py --write-report
 python .codex/skills/novel-compiler-pro/scripts/word_count.py --write-report
 ```
@@ -17,11 +18,13 @@ Script outputs:
 
 - `reports/project_gate_report.md`
 - `reports/chapter_gate_report.md`
+- `reports/scene_density_report.md`
 - `reports/repetition_report.md`
 - `reports/word_count_report.md`
 
 Scripts can detect missing structure, invalid filenames, numbering gaps, duplicate chapter numbers, rough word counts, and obvious draft residue. After scripts pass or warn, perform the semantic checks below.
 Repetition gates catch exact and near-structural repetition; they do not replace semantic anti-repetition review.
+Scene-density gates catch summary-like prose, missing early dialogue, banned AI-style phrases, and conclusion-like endings; they do not replace the Anti-AI Rewriter pass.
 
 ## Chapter Gate
 
@@ -42,6 +45,9 @@ Check:
 11. Foreshadowing is updated.
 12. Reader has a reason to continue.
 13. No meta notes, TODOs, or outline residue remain in prose.
+14. The chapter is scene-driven rather than summary-driven.
+15. The chapter avoids banned AI-style explanatory patterns.
+16. The chapter has enough visible action, dialogue, objects, and spatial movement.
 
 Write result to `reports/compile_log.md`.
 
@@ -54,6 +60,7 @@ Run every 3-5 chapters or after each volume.
 Write `reports/consistency_report.md`.
 
 Also run `scripts/check_repetition.py --write-report` after every batch. If it returns `FAIL`, repair repeated text or repeated scene function before drafting more chapters.
+Also run `scripts/check_scene_density.py --write-report`. If it returns `FAIL`, rewrite through the Anti-AI Rewriter before continuing.
 
 Issue table:
 
@@ -136,6 +143,16 @@ Severity:
 - repeated emotional beat without new cost
 - repeated stock phrase or body action
 
+### Scene Mode / Anti-AI Style
+
+- first paragraph lacks concrete image or action
+- no dialogue appears in the first 500 Chinese characters
+- long stretches contain no visible event
+- direct emotional labels replace behavior
+- banned commentary patterns appear
+- chapter ends with abstract summary instead of image/action/dialogue
+- dialogue explains plot like a briefing
+
 ## Repair Pass
 
 Write `reports/revision_report.md`.
@@ -205,6 +222,7 @@ Before final semantic review, run:
 ```bash
 python .codex/skills/novel-compiler-pro/scripts/check_project.py --write-report
 python .codex/skills/novel-compiler-pro/scripts/check_chapters.py --write-report
+python .codex/skills/novel-compiler-pro/scripts/check_scene_density.py --write-report
 python .codex/skills/novel-compiler-pro/scripts/check_repetition.py --write-report
 python .codex/skills/novel-compiler-pro/scripts/build_retrieval_index.py
 python .codex/skills/novel-compiler-pro/scripts/build_milestone_report.py --write-report
