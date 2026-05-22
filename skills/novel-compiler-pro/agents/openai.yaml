@@ -1,7 +1,7 @@
 interface:
   display_name: "Novel Compiler Pro"
-  short_description: "Chinese long-novel compiler with memory, anti-repeat gates, and 100k reviews"
-  default_prompt: "Use $novel to compile a Chinese long-form novel with specs, canon, plans, anti-repetition gates, 100k milestone reviews, chapters, reports, and final manuscript."
+  short_description: "Chinese long-novel compiler with scene mode, anti-AI gates, memory, and 100k reviews"
+  default_prompt: "Use $novel to compile a Chinese long-form novel with specs, canon, plans, scene-driven chapters, anti-AI narrative gates, anti-repetition gates, 100k milestone reviews, reports, and final manuscript."
 
 policy:
   allow_implicit_invocation: true
