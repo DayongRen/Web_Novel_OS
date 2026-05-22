@@ -122,6 +122,7 @@ Use this pipeline:
 
 Detailed rules live in:
 
+- [USAGE.md](USAGE.md): how to invoke `$novel` in chat, common prompts, installation, and script commands.
 - [workflow.md](references/workflow.md): SDD plus compile pipeline.
 - [state-system.md](references/state-system.md): Smart State and long-term memory.
 - [quality-gates.md](references/quality-gates.md): consistency, repair, style, and final gates.
