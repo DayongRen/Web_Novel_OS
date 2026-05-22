@@ -86,6 +86,8 @@ REQUIRED_FILES = {
         "revision_report.md",
         "style_report.md",
         "repetition_report.md",
+        "scene_density_report.md",
+        "anti_ai_style_report.md",
         "milestone_100k_report.md",
         "final_consistency_report.md",
         "final_report.md",
