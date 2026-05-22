@@ -118,6 +118,8 @@ reports/pacing_report.md
 reports/revision_report.md
 reports/style_report.md
 reports/repetition_report.md
+reports/scene_density_report.md
+reports/anti_ai_style_report.md
 reports/milestone_100k_report.md
 reports/final_consistency_report.md
 reports/final_report.md
