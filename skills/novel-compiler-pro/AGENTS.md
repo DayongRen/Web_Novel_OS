@@ -30,6 +30,8 @@ Example:
 
 Keep `SKILL.md` concise. Put detailed protocol material in `references/`.
 
+For user-facing invocation examples and setup notes, update `USAGE.md`.
+
 ## Scripts
 
 No-dependency Python scripts live in `scripts/`.
